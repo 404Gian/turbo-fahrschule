@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="de" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Datenschutzerklärung – Turbo Fahrschule Berlin</title>
+  <meta name="description" content="Datenschutzerklärung der Turbo Fahrschule Berlin gemäß DSGVO." />
+  <meta name="robots" content="noindex, follow" />
+  <link rel="canonical" href="https://www.turbo-fahrschule.com/datenschutz.html" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* ── Legal page overrides ── */
+    .legal-hero {
+      background: var(--navy);
+      padding-block: clamp(6rem, 14vw, 9rem) clamp(3rem, 6vw, 4.5rem);
+      padding-block-start: calc(clamp(6rem, 14vw, 9rem) + 70px);
+    }
+    .legal-hero .eyebrow { margin-bottom: .75rem; }
+    .legal-hero h1 {
+      font-family: var(--display);
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      color: #fff;
+      letter-spacing: -.04em;
+      line-height: 1.12;
+      margin-bottom: .75rem;
+    }
+    .legal-hero p {
+      color: rgba(255,255,255,.55);
+      font-size: .93rem;
+    }
+
+    .legal-body {
+      padding-block: clamp(3rem, 6vw, 5rem);
+      background: var(--white);
+    }
+    .legal-content {
+      max-width: 780px;
+      margin-inline: auto;
+    }
+
+    /* TOC */
+    .toc {
+      background: var(--off);
+      border: 1px solid var(--border);
+      border-radius: var(--r-md);
+      padding: 1.4rem 1.75rem;
+      margin-bottom: clamp(2rem, 4vw, 3rem);
+    }
+    .toc h2 {
+      font-family: var(--display);
+      font-size: .9rem;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      color: var(--navy);
+      margin-bottom: .9rem;
+    }
+    .toc ol {
+      list-style: decimal;
+      padding-inline-start: 1.3rem;
+      display: flex;
+      flex-direction: column;
+      gap: .4rem;
+    }
+    .toc a {
+      font-size: .88rem;
+      color: #3b5bdb;
+      text-decoration: none;
+      transition: color .18s;
+    }
+    .toc a:hover { color: var(--navy); text-decoration: underline; }
+
+    .legal-section {
+      margin-bottom: clamp(2rem, 4vw, 3rem);
+      padding-bottom: clamp(2rem, 4vw, 3rem);
+      border-bottom: 1px solid var(--border);
+    }
+    .legal-section:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .legal-section h2 {
+      font-family: var(--display);
+      font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+      color: var(--navy);
+      letter-spacing: -.02em;
+      margin-bottom: 1rem;
+      scroll-margin-top: 90px;
+    }
+    .legal-section h3 {
+      font-family: var(--display);
+      font-size: 1rem;
+      color: var(--navy);
+      margin-top: 1.5rem;
+      margin-bottom: .5rem;
+    }
+    .legal-section p,
+    .legal-section li {
+      font-size: .93rem;
+      color: var(--muted);
+      line-height: 1.75;
+    }
+    .legal-section p + p { margin-top: .75rem; }
+    .legal-section ul {
+      list-style: disc;
+      padding-inline-start: 1.4rem;
+      display: flex;
+      flex-direction: column;
+      gap: .3rem;
+      margin-top: .5rem;
+    }
+    .legal-section a {
+      color: #3b5bdb;
+      text-decoration: underline;
+      transition: color .18s;
+    }
+    .legal-section a:hover { color: var(--navy); }
+
+    .placeholder {
+      display: inline-block;
+      background: rgba(255,188,0,.18);
+      color: #92610a;
+      border: 1.5px dashed var(--amber);
+      border-radius: var(--r-xs);
+      padding: .1em .5em;
+      font-size: .88em;
+      font-weight: 600;
+      font-style: normal;
+    }
+
+    .legal-badge {
+      display: inline-flex;
+      align-items: flex-start;
+      gap: .75rem;
+      background: var(--off);
+      border: 1px solid var(--border);
+      border-radius: var(--r-md);
+      padding: 1rem 1.4rem;
+      margin-bottom: 1.75rem;
+      font-size: .82rem;
+      color: var(--muted);
+      width: 100%;
+    }
+    .legal-badge strong { color: var(--navy); display: block; margin-bottom: .15rem; }
+
+    .info-box {
+      background: rgba(59,91,219,.06);
+      border: 1px solid rgba(59,91,219,.18);
+      border-radius: var(--r-sm);
+      padding: .9rem 1.2rem;
+      margin-top: .75rem;
+      font-size: .88rem;
+      color: #1e3a8a;
+      line-height: 1.65;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ╔══════════════════════════════╗
+     ║         HEADER / NAV         ║
+     ╚══════════════════════════════╝ -->
+<header class="site-header is-scrolled" id="siteHeader">
+  <div class="hdr-inner wrap">
+
+    <a href="index.html" class="logo" aria-label="Turbo Fahrschule Berlin – zur Startseite">
+      <span class="logo-bolt" aria-hidden="true">
+        <svg width="22" height="26" viewBox="0 0 22 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M13 1L1 15h9l-1 10 12-14h-9l1-10z" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+        </svg>
+      </span>
+      <span class="logo-word">Turbo</span>
+      <span class="logo-word logo-word--thin">Fahrschule</span>
+    </a>
+
+    <nav class="primary-nav" id="primaryNav" aria-label="Hauptnavigation">
+      <a href="index.html#vorteile"  class="nav-a">Vorteile</a>
+      <a href="index.html#klassen"   class="nav-a">Klassen</a>
+      <a href="index.html#warum"     class="nav-a">Warum wir?</a>
+      <a href="index.html#reviews"   class="nav-a">Bewertungen</a>
+      <a href="index.html#faq"       class="nav-a">FAQ</a>
+    </nav>
+
+    <div class="hdr-actions">
+      <a href="index.html#kontakt" class="btn btn-amber btn-sm hdr-cta">Beratung anfragen</a>
+      <button class="burger" id="burgerBtn" aria-label="Menü öffnen" aria-expanded="false" aria-controls="primaryNav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+  </div>
+</header>
+
+
+<!-- ╔══════════════════════════════╗
+     ║          PAGE HERO           ║
+     ╚══════════════════════════════╝ -->
+<section class="legal-hero">
+  <div class="wrap">
+    <p class="eyebrow eyebrow--amber">Rechtliches</p>
+    <h1>Datenschutzerklärung</h1>
+    <p>Zuletzt aktualisiert: Juni 2026 · Gemäß DSGVO, BDSG und TMG</p>
+  </div>
+</section>
+
+
+<!-- ╔══════════════════════════════╗
+     ║          CONTENT             ║
+     ╚══════════════════════════════╝ -->
+<main class="legal-body" id="main-content">
+  <div class="wrap">
+    <div class="legal-content">
+
+      <div class="legal-badge">
+        <div>
+          <strong>Hinweis für Inhaber</strong>
+          Alle gelb markierten Felder (<span class="placeholder">PLATZHALTER</span>) müssen vor Veröffentlichung durch echte Unternehmensdaten ersetzt werden. Diese Vorlage ersetzt keine rechtliche Beratung.
+        </div>
+      </div>
+
+      <!-- Inhaltsverzeichnis -->
+      <nav class="toc" aria-label="Inhaltsverzeichnis">
+        <h2>Inhaltsverzeichnis</h2>
+        <ol>
+          <li><a href="#s1">Verantwortlicher</a></li>
+          <li><a href="#s2">Allgemeines zur Datenverarbeitung</a></li>
+          <li><a href="#s3">Hosting (Vercel)</a></li>
+          <li><a href="#s4">Kontaktformular</a></li>
+          <li><a href="#s5">Speicherung von Kontaktdaten</a></li>
+          <li><a href="#s6">Google Fonts</a></li>
+          <li><a href="#s7">Cookies</a></li>
+          <li><a href="#s8">Mehrsprachigkeit</a></li>
+          <li><a href="#s9">Betroffenenrechte</a></li>
+          <li><a href="#s10">Beschwerderecht</a></li>
+          <li><a href="#s11">Aktualität und Änderungen</a></li>
+        </ol>
+      </nav>
+
+      <!-- 1 Verantwortlicher -->
+      <div class="legal-section" id="s1">
+        <h2>1. Verantwortlicher</h2>
+        <p>Verantwortlicher im Sinne der Datenschutz-Grundverordnung (DSGVO) ist:</p>
+        <p>
+          <strong>Turbo Fahrschule</strong><br>
+          <span class="placeholder">Straße und Hausnummer</span><br>
+          <span class="placeholder">PLZ und Ort</span><br>
+          Deutschland<br><br>
+          Telefon: <span class="placeholder">+49 (0) XXX XXXXXXX</span><br>
+          E-Mail: <a href="mailto:info@turbo-fahrschule.com"><span class="placeholder">info@turbo-fahrschule.com</span></a>
+        </p>
+        <h3>Datenschutzbeauftragter</h3>
+        <p>
+          <span class="placeholder">Falls kein betrieblicher Datenschutzbeauftragter bestellt werden muss (gilt bei kleinen Unternehmen unter 20 Personen, die keine umfangreiche automatisierte Datenverarbeitung betreiben), diesen Abschnitt entfernen. Andernfalls: Name und Kontaktdaten des Datenschutzbeauftragten eintragen.</span>
+        </p>
+      </div>
+
+      <!-- 2 Allgemeines -->
+      <div class="legal-section" id="s2">
+        <h2>2. Allgemeines zur Datenverarbeitung</h2>
+
+        <h3>Umfang der Verarbeitung</h3>
+        <p>
+          Wir erheben und verwenden personenbezogene Daten unserer Nutzer grundsätzlich nur, soweit dies zur Bereitstellung einer funktionsfähigen Website sowie unserer Inhalte und Leistungen erforderlich ist. Die Erhebung und Verwendung personenbezogener Daten erfolgt regelmäßig nur nach Einwilligung des Nutzers oder wenn die Verarbeitung durch gesetzliche Vorschriften gestattet ist.
+        </p>
+
+        <h3>Rechtsgrundlagen</h3>
+        <p>Soweit wir für Verarbeitungsvorgänge personenbezogener Daten eine Einwilligung einholen, dient Art. 6 Abs. 1 lit. a DSGVO als Rechtsgrundlage. Bei der Verarbeitung von personenbezogenen Daten, die zur Erfüllung eines Vertrages erforderlich ist, dient Art. 6 Abs. 1 lit. b DSGVO als Rechtsgrundlage. Für Verarbeitungen, die zur Erfüllung einer rechtlichen Verpflichtung erforderlich sind, gilt Art. 6 Abs. 1 lit. c DSGVO. Ist die Verarbeitung zur Wahrung eines berechtigten Interesses unseres Unternehmens oder eines Dritten erforderlich, gilt Art. 6 Abs. 1 lit. f DSGVO als Rechtsgrundlage.</p>
+
+        <h3>Datenlöschung und Speicherdauer</h3>
+        <p>
+          Personenbezogene Daten werden gelöscht oder gesperrt, sobald der Zweck der Speicherung entfällt. Eine Speicherung kann darüber hinaus erfolgen, wenn dies durch den europäischen oder nationalen Gesetzgeber in unionsrechtlichen Verordnungen, Gesetzen oder sonstigen Vorschriften, denen der Verantwortliche unterliegt, vorgesehen wurde. Eine Sperrung oder Löschung der Daten erfolgt auch dann, wenn eine durch die genannten Normen vorgeschriebene Speicherfrist abläuft.
+        </p>
+      </div>
+
+      <!-- 3 Hosting Vercel -->
+      <div class="legal-section" id="s3">
+        <h2>3. Hosting (Vercel)</h2>
+        <p>
+          Diese Website wird auf den Servern von <strong>Vercel Inc.</strong>, 340 Pine Street, Suite 701, San Francisco, CA 94104, USA, gehostet.
+        </p>
+        <p>
+          Beim Besuch unserer Website werden automatisch Informationen in sogenannten Server-Logfiles gespeichert, die Ihr Browser automatisch an Vercel übermittelt. Dies sind:
+        </p>
+        <ul>
+          <li>IP-Adresse des anfragenden Rechners (anonymisiert)</li>
+          <li>Datum und Uhrzeit der Anfrage</li>
+          <li>Name und URL der abgerufenen Datei</li>
+          <li>Website, von der aus der Zugriff erfolgt (Referrer-URL)</li>
+          <li>Verwendeter Browser und ggf. das Betriebssystem</li>
+        </ul>
+        <p>
+          Die Rechtsgrundlage für die Datenverarbeitung ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einem sicheren und stabilen Betrieb der Website). Die Logfiles werden nach spätestens 30 Tagen gelöscht.
+        </p>
+        <div class="info-box">
+          Vercel verarbeitet Daten auch in den USA. Die Übermittlung erfolgt auf Basis der EU-Standardvertragsklauseln (SCC) gemäß Art. 46 Abs. 2 lit. c DSGVO. Weitere Informationen: <a href="https://vercel.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer">vercel.com/legal/privacy-policy</a>
+        </div>
+      </div>
+
+      <!-- 4 Kontaktformular -->
+      <div class="legal-section" id="s4">
+        <h2>4. Kontaktformular</h2>
+        <p>
+          Auf unserer Website ist ein Kontaktformular vorhanden, das zur elektronischen Kontaktaufnahme genutzt werden kann. Nimmt ein Nutzer diese Möglichkeit wahr, so werden die in der Eingabemaske eingegeben Daten an uns übermittelt und gespeichert:
+        </p>
+        <ul>
+          <li>Name</li>
+          <li>Telefonnummer</li>
+          <li>E-Mail-Adresse (optional)</li>
+          <li>Interesse / gewünschter Führerscheinkurs</li>
+          <li>Bevorzugte Sprache</li>
+          <li>Freitextnachricht (optional)</li>
+          <li>Zeitpunkt der Übermittlung</li>
+        </ul>
+
+        <h3>Verarbeitung durch Formspree</h3>
+        <p>
+          Das Formular wird über den Dienst <strong>Formspree Inc.</strong>, 2261 Market Street #4990, San Francisco, CA 94114, USA, verarbeitet. Formspree empfängt die Formulardaten und leitet sie per E-Mail an uns weiter.
+        </p>
+        <div class="info-box">
+          Formspree verarbeitet Daten in den USA auf Basis von EU-Standardvertragsklauseln. Datenschutzerklärung: <a href="https://formspree.io/legal/privacy-policy" target="_blank" rel="noopener noreferrer">formspree.io/legal/privacy-policy</a>
+        </div>
+
+        <h3>Rechtsgrundlage</h3>
+        <p>
+          Rechtsgrundlage für die Verarbeitung der Daten, die im Zuge einer Übersendung einer E-Mail oder Kontaktanfrage übermittelt werden, ist Art. 6 Abs. 1 lit. b DSGVO (Vertragsanbahnung) sowie Art. 6 Abs. 1 lit. a DSGVO (Einwilligung durch aktives Abschicken des Formulars).
+        </p>
+
+        <h3>Speicherdauer</h3>
+        <p>
+          Die Daten werden gelöscht, sobald sie für die Erreichung des Zweckes ihrer Erhebung nicht mehr erforderlich sind — in der Regel nach Abschluss der Anfrage. Soweit gesetzliche Aufbewahrungsfristen bestehen (z. B. 6 oder 10 Jahre nach Handels- oder Steuerrecht), werden die Daten bis zum Ablauf dieser Fristen gesperrt.
+        </p>
+      </div>
+
+      <!-- 5 Speicherung von Kontaktdaten -->
+      <div class="legal-section" id="s5">
+        <h2>5. Speicherung von Kontaktdaten</h2>
+        <p>
+          Kontaktdaten (Name, Telefon, E-Mail), die uns über das Formular, per Telefon oder per E-Mail übermittelt werden, speichern wir zum Zweck der Bearbeitung Ihrer Anfrage sowie für den Fall von Anschlussfragen in unserem internen System.
+        </p>
+        <p>
+          Die Daten werden ausschließlich zur Bearbeitung der jeweiligen Anfrage genutzt und nicht ohne ausdrückliche Einwilligung an Dritte weitergegeben. Eine Nutzung zu Werbezwecken oder eine Weitergabe an andere Fahrschulen oder Vermittler erfolgt nicht.
+        </p>
+        <p>
+          <strong>Speicherort:</strong> <span class="placeholder">Bitte angeben, wo Kontaktdaten gespeichert werden, z. B. „in unserem E-Mail-Postfach bei Provider XY" oder „in unserer CRM-Software [Name]".</span>
+        </p>
+        <p>
+          <strong>Speicherdauer:</strong> <span class="placeholder">Speicherdauer angeben, z. B. „12 Monate nach Abschluss der Geschäftsbeziehung" oder „bis auf Widerspruch des Nutzers".</span>
+        </p>
+      </div>
+
+      <!-- 6 Google Fonts -->
+      <div class="legal-section" id="s6">
+        <h2>6. Google Fonts</h2>
+        <p>
+          Unsere Website verwendet Schriftarten des Dienstes <strong>Google Fonts</strong> (Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland). Die Einbindung erfolgt über einen Serveraufruf bei Google. Dabei wird Ihre IP-Adresse an Google übermittelt.
+        </p>
+        <p>
+          Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einer einheitlichen und ansprechenden Darstellung unserer Website). Weitere Informationen: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">policies.google.com/privacy</a>
+        </p>
+        <div class="info-box">
+          <strong>Tipp:</strong> Um die Übermittlung an Google zu vermeiden, können Schriftarten alternativ lokal eingebunden werden. <span class="placeholder">Falls du auf lokales Hosting umstellen möchtest, diesen Abschnitt anpassen oder entfernen.</span>
+        </div>
+      </div>
+
+      <!-- 7 Cookies -->
+      <div class="legal-section" id="s7">
+        <h2>7. Cookies</h2>
+        <p>
+          Unsere Website verwendet aktuell <strong>keine Tracking-Cookies</strong> und keine Cookies von Drittanbietern zu Werbezwecken.
+        </p>
+        <p>
+          Technisch notwendige Cookies können für den Betrieb der Website eingesetzt werden (z. B. Session-Cookies des Hosting-Anbieters Vercel). Diese Cookies sind für den Betrieb der Website erforderlich und werden nach Ende der Browsersitzung automatisch gelöscht.
+        </p>
+        <p>
+          Rechtsgrundlage für den Einsatz technisch notwendiger Cookies ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse).
+        </p>
+        <p>
+          Du kannst die Speicherung von Cookies durch eine entsprechende Einstellung deines Browsers verhindern. Wir weisen darauf hin, dass du in diesem Fall möglicherweise nicht alle Funktionen dieser Website vollumfänglich nutzen kannst.
+        </p>
+        <div class="info-box">
+          <span class="placeholder">Falls zukünftig Analyse-Tools (z. B. Google Analytics, Matomo) oder Marketing-Cookies eingesetzt werden, ist dieser Abschnitt entsprechend zu erweitern und ein Cookie-Banner (Consent Management) rechtlich erforderlich.</span>
+        </div>
+      </div>
+
+      <!-- 8 Mehrsprachigkeit -->
+      <div class="legal-section" id="s8">
+        <h2>8. Mehrsprachige Website</h2>
+        <p>
+          Unsere Website ist auf Deutsch, Arabisch und Englisch verfügbar. Die Sprachauswahl wird ausschließlich clientseitig im Browser gespeichert (localStorage) und an keine Server oder Dritte übermittelt.
+        </p>
+        <p>
+          Durch die Sprachauswahl werden keine zusätzlichen personenbezogenen Daten erhoben oder verarbeitet. Es erfolgt keine Verknüpfung der Sprachpräferenz mit anderen personenbezogenen Daten.
+        </p>
+      </div>
+
+      <!-- 9 Betroffenenrechte -->
+      <div class="legal-section" id="s9">
+        <h2>9. Rechte der betroffenen Person</h2>
+        <p>Ihnen stehen als betroffene Person folgende Rechte zu:</p>
+
+        <h3>Auskunftsrecht (Art. 15 DSGVO)</h3>
+        <p>Sie haben das Recht, Auskunft über Ihre bei uns gespeicherten personenbezogenen Daten zu verlangen.</p>
+
+        <h3>Recht auf Berichtigung (Art. 16 DSGVO)</h3>
+        <p>Sie haben das Recht, die Berichtigung unrichtiger oder Vervollständigung unvollständiger Daten zu verlangen.</p>
+
+        <h3>Recht auf Löschung (Art. 17 DSGVO)</h3>
+        <p>Sie haben das Recht, die Löschung Ihrer gespeicherten personenbezogenen Daten zu verlangen, soweit nicht die Verarbeitung zur Ausübung des Rechts auf freie Meinungsäußerung, zur Erfüllung einer rechtlichen Verpflichtung oder zur Geltendmachung, Ausübung oder Verteidigung von Rechtsansprüchen erforderlich ist.</p>
+
+        <h3>Recht auf Einschränkung der Verarbeitung (Art. 18 DSGVO)</h3>
+        <p>Sie haben das Recht, die Einschränkung der Verarbeitung Ihrer personenbezogenen Daten zu verlangen.</p>
+
+        <h3>Recht auf Datenübertragbarkeit (Art. 20 DSGVO)</h3>
+        <p>Sie haben das Recht, Ihre personenbezogenen Daten, die Sie uns bereitgestellt haben, in einem strukturierten, gängigen und maschinenlesbaren Format zu erhalten.</p>
+
+        <h3>Widerspruchsrecht (Art. 21 DSGVO)</h3>
+        <p>Sie haben das Recht, aus Gründen, die sich aus Ihrer besonderen Situation ergeben, jederzeit gegen die Verarbeitung Ihrer personenbezogenen Daten, die auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO erfolgt, Widerspruch einzulegen.</p>
+
+        <h3>Recht auf Widerruf der Einwilligung</h3>
+        <p>Sofern Sie eine Einwilligung erteilt haben, haben Sie das Recht, diese jederzeit mit Wirkung für die Zukunft zu widerrufen. Durch den Widerruf der Einwilligung wird die Rechtmäßigkeit der aufgrund der Einwilligung bis zum Widerruf erfolgten Verarbeitung nicht berührt.</p>
+
+        <p style="margin-top:1rem;">
+          Zur Ausübung Ihrer Rechte wenden Sie sich bitte an:<br>
+          E-Mail: <a href="mailto:info@turbo-fahrschule.com"><span class="placeholder">info@turbo-fahrschule.com</span></a><br>
+          Telefon: <span class="placeholder">+49 (0) XXX XXXXXXX</span>
+        </p>
+      </div>
+
+      <!-- 10 Beschwerderecht -->
+      <div class="legal-section" id="s10">
+        <h2>10. Beschwerderecht bei der Aufsichtsbehörde</h2>
+        <p>
+          Unbeschadet eines anderweitigen verwaltungsrechtlichen oder gerichtlichen Rechtsbehelfs steht Ihnen das Recht auf Beschwerde bei einer Aufsichtsbehörde zu, wenn Sie der Ansicht sind, dass die Verarbeitung der Sie betreffenden personenbezogenen Daten gegen die DSGVO verstößt.
+        </p>
+        <p>
+          Die zuständige Aufsichtsbehörde für Berlin ist:
+        </p>
+        <p>
+          <strong>Berliner Beauftragte für Datenschutz und Informationsfreiheit</strong><br>
+          Friedrichstr. 219<br>
+          10969 Berlin<br>
+          Telefon: +49 (0)30 13889-0<br>
+          E-Mail: <a href="mailto:mailbox@datenschutz-berlin.de">mailbox@datenschutz-berlin.de</a><br>
+          Web: <a href="https://www.datenschutz-berlin.de" target="_blank" rel="noopener noreferrer">www.datenschutz-berlin.de</a>
+        </p>
+      </div>
+
+      <!-- 11 Aktualität -->
+      <div class="legal-section" id="s11">
+        <h2>11. Aktualität und Änderungen dieser Datenschutzerklärung</h2>
+        <p>
+          Diese Datenschutzerklärung ist aktuell gültig und hat den Stand Juni 2026.
+        </p>
+        <p>
+          Durch die Weiterentwicklung unserer Website und Angebote oder aufgrund geänderter gesetzlicher bzw. behördlicher Vorgaben kann es notwendig werden, diese Datenschutzerklärung zu ändern. Die jeweils aktuelle Datenschutzerklärung kann jederzeit auf dieser Seite abgerufen werden.
+        </p>
+      </div>
+
+    </div><!-- /legal-content -->
+  </div>
+</main>
+
+
+<!-- ╔══════════════════════════════╗
+     ║            FOOTER            ║
+     ╚══════════════════════════════╝ -->
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+
+    <div class="footer-brand">
+      <a href="index.html" class="logo" aria-label="Turbo Fahrschule Berlin">
+        <span class="logo-bolt" aria-hidden="true">
+          <svg width="22" height="26" viewBox="0 0 22 26" fill="none"><path d="M13 1L1 15h9l-1 10 12-14h-9l1-10z" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+        </span>
+        <span class="logo-word">Turbo</span>
+        <span class="logo-word logo-word--thin">Fahrschule</span>
+      </a>
+      <p class="footer-tagline">Seit 1985 deine Fahrschule in Berlin-Moabit.<br>Führerschein auf Deutsch, <span lang="ar">العربية</span> &amp; English.</p>
+      <div class="footer-socials">
+        <a href="https://www.facebook.com/TurboFahrschule/" target="_blank" rel="noopener" aria-label="Facebook">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+        </a>
+        <a href="https://wa.me/493039837537" target="_blank" rel="noopener" aria-label="WhatsApp">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <nav class="footer-nav" aria-label="Footer-Navigation">
+      <div class="fn-col">
+        <h4>Führerscheinklassen</h4>
+        <ul>
+          <li><a href="index.html#klassen">Klasse B (PKW)</a></li>
+          <li><a href="index.html#klassen">Klasse B Automatik</a></li>
+          <li><a href="index.html#klassen">B196 Motorrad</a></li>
+          <li><a href="index.html#klassen">ASF Seminar</a></li>
+          <li><a href="index.html#klassen">Führerschein Umschreibung</a></li>
+        </ul>
+      </div>
+      <div class="fn-col">
+        <h4>Über uns</h4>
+        <ul>
+          <li><a href="index.html#vorteile">Unsere Vorteile</a></li>
+          <li><a href="index.html#warum">Warum Turbo?</a></li>
+          <li><a href="index.html#reviews">Bewertungen</a></li>
+          <li><a href="index.html#faq">FAQ</a></li>
+          <li><a href="index.html#kontakt">Kontakt</a></li>
+        </ul>
+      </div>
+      <div class="fn-col">
+        <h4>Öffnungszeiten</h4>
+        <table class="fn-hours">
+          <tr><td>Mo – Fr</td><td>12:00 – 18:00</td></tr>
+          <tr><td>Samstag</td><td>11:00 – 14:00</td></tr>
+          <tr><td>Sonntag</td><td>Geschlossen</td></tr>
+        </table>
+        <address>
+          Bredowstraße 2<br>
+          10551 Berlin-Moabit
+        </address>
+      </div>
+    </nav>
+
+  </div>
+
+  <div class="footer-bottom">
+    <div class="wrap footer-bottom-inner">
+      <p>© 2026 Turbo Fahrschule Berlin · Alle Rechte vorbehalten</p>
+      <ul class="legal-links">
+        <li><a href="impressum.html">Impressum</a></li>
+        <li><a href="datenschutz.html" aria-current="page">Datenschutz</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Burger-Menü
+  const burgerBtn = document.getElementById('burgerBtn');
+  const primaryNav = document.getElementById('primaryNav');
+  if (burgerBtn && primaryNav) {
+    burgerBtn.addEventListener('click', () => {
+      const isOpen = primaryNav.classList.toggle('is-open');
+      burgerBtn.classList.toggle('is-open', isOpen);
+      burgerBtn.setAttribute('aria-expanded', String(isOpen));
+      document.body.style.overflow = isOpen ? 'hidden' : '';
+    });
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') {
+        primaryNav.classList.remove('is-open');
+        burgerBtn.classList.remove('is-open');
+        burgerBtn.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      }
+    });
+  }
+</script>
+</body>
+</html>
