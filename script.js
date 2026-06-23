@@ -276,15 +276,40 @@ on(document, 'click', e => {
     if (btnSpinner) btnSpinner.hidden = false;
     submitBtn.disabled = true;
 
-    // Simulate API call (replace with real fetch)
-    await new Promise(r => setTimeout(r, 1300));
+    try {
+      // TODO: Formspree-Endpoint mit deiner eigenen ID ersetzen.
+      // Konto erstellen auf https://formspree.io → neues Formular → ID kopieren.
+      const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xaqgnngk';
 
-    // Success state
-    submitBtn.hidden = true;
-    if (success) success.hidden = false;
+      const data = new FormData(form);
+      const res  = await fetch(FORMSPREE_ENDPOINT, {
+        method:  'POST',
+        headers: { Accept: 'application/json' },
+        body:    data,
+      });
 
-    // Reset
-    form.reset();
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+
+      // Erfolg
+      submitBtn.hidden = true;
+      if (success) success.hidden = false;
+      form.reset();
+    } catch (err) {
+      // Fehlerfall: Button wieder aktivieren
+      if (btnLabel)   btnLabel.hidden   = false;
+      if (btnSpinner) btnSpinner.hidden = true;
+      submitBtn.disabled = false;
+
+      // Fehlermeldung unter dem Button anzeigen
+      let errEl = form.querySelector('.form-send-error');
+      if (!errEl) {
+        errEl = document.createElement('p');
+        errEl.className = 'form-send-error field-err';
+        errEl.style.textAlign = 'center';
+        submitBtn.insertAdjacentElement('afterend', errEl);
+      }
+      errEl.textContent = 'Senden fehlgeschlagen. Bitte ruf uns an oder versuch es erneut.';
+    }
   });
 })();
 
