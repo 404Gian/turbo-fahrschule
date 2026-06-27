@@ -48,11 +48,11 @@
     </a>
 
     <nav class="primary-nav" id="primaryNav" aria-label="Hauptnavigation">
-      <a href="#vorteile"    class="nav-a">Vorteile</a>
-      <a href="#klassen"     class="nav-a">Klassen</a>
-      <a href="#warum"       class="nav-a">Warum wir?</a>
-      <a href="#reviews"     class="nav-a">Bewertungen</a>
-      <a href="#faq"         class="nav-a">FAQ</a>
+      <a href="#vorteile"    class="nav-a" data-i18n="navVorteile">Vorteile</a>
+      <a href="#klassen"     class="nav-a" data-i18n="navKlassen">Klassen</a>
+      <a href="#warum"       class="nav-a" data-i18n="navWarum">Warum wir?</a>
+      <a href="#reviews"     class="nav-a" data-i18n="navBewertungen">Bewertungen</a>
+      <a href="#faq"         class="nav-a" data-i18n="navFaq">FAQ</a>
     </nav>
 
     <div class="hdr-actions">
@@ -63,7 +63,7 @@
         <button class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
       </div>
 
-      <a href="#kontakt" class="btn btn-amber btn-sm hdr-cta">Beratung anfragen</a>
+      <a href="#kontakt" class="btn btn-amber btn-sm hdr-cta" data-i18n="hdrCta">Beratung anfragen</a>
 
       <button class="burger" id="burgerBtn" aria-label="Menü öffnen" aria-expanded="false" aria-controls="primaryNav">
         <span></span><span></span><span></span>
@@ -791,28 +791,28 @@
       <!-- Right: form -->
       <div class="kontakt-form-wrap" data-reveal="left">
         <form class="kontakt-form" id="kontaktForm" novalidate autocomplete="on">
-          <h3 class="form-title">Kostenlose Beratung anfragen</h3>
+          <h3 class="form-title" data-i18n="formTitle">Kostenlose Beratung anfragen</h3>
 
           <div class="form-row form-row--2">
             <div class="field">
-              <label for="f-name">Dein Name <span aria-hidden="true">*</span></label>
-              <input type="text" id="f-name" name="name" placeholder="Max Mustermann" required autocomplete="name" />
+              <label for="f-name"><span data-i18n="labelName">Dein Name</span> <span aria-hidden="true">*</span></label>
+              <input type="text" id="f-name" name="name" placeholder="Max Mustermann" required autocomplete="name" data-i18n-placeholder="placeholderName" />
               <span class="field-err" role="alert" aria-live="polite"></span>
             </div>
             <div class="field">
-              <label for="f-phone">Telefon <span aria-hidden="true">*</span></label>
-              <input type="tel" id="f-phone" name="phone" placeholder="+49 160 …" required autocomplete="tel" />
+              <label for="f-phone"><span data-i18n="labelPhone">Telefon</span> <span aria-hidden="true">*</span></label>
+              <input type="tel" id="f-phone" name="phone" placeholder="+49 160 …" required autocomplete="tel" data-i18n-placeholder="placeholderPhone" />
               <span class="field-err" role="alert" aria-live="polite"></span>
             </div>
           </div>
 
           <div class="field">
-            <label for="f-email">E-Mail</label>
-            <input type="email" id="f-email" name="email" placeholder="max@example.de" autocomplete="email" />
+            <label for="f-email" data-i18n="labelEmail">E-Mail</label>
+            <input type="email" id="f-email" name="email" placeholder="max@example.de" autocomplete="email" data-i18n-placeholder="placeholderEmail" />
           </div>
 
           <div class="field">
-            <label for="f-interest">Ich interessiere mich für <span aria-hidden="true">*</span></label>
+            <label for="f-interest"><span data-i18n="labelInterest">Ich interessiere mich für</span> <span aria-hidden="true">*</span></label>
             <div class="select-wrap">
               <select id="f-interest" name="interest" required>
                 <option value="" disabled selected>Bitte wählen …</option>
@@ -830,7 +830,7 @@
           </div>
 
           <div class="field">
-            <label for="f-lang">Bevorzugte Sprache</label>
+            <label for="f-lang" data-i18n="labelLang">Bevorzugte Sprache</label>
             <div class="select-wrap">
               <select id="f-lang" name="lang">
                 <option value="de">🇩🇪 Deutsch</option>
@@ -842,30 +842,32 @@
           </div>
 
           <div class="field">
-            <label for="f-msg">Nachricht (optional)</label>
-            <textarea id="f-msg" name="message" rows="3" placeholder="Hast du spezielle Fragen oder Wünsche?"></textarea>
+            <label for="f-msg" data-i18n="labelMsg">Nachricht (optional)</label>
+            <textarea id="f-msg" name="message" rows="3" placeholder="Hast du spezielle Fragen oder Wünsche?" data-i18n-placeholder="placeholderMsg"></textarea>
           </div>
 
           <div class="field field--check">
-            <input type="checkbox" id="f-dsgvo" name="dsgvo" required />
-            <label for="f-dsgvo">Ich habe die <a href="datenschutz.html" class="form-link" target="_blank">Datenschutzerklärung</a> gelesen und stimme zu. <span aria-hidden="true">*</span></label>
+            <div class="check-row">
+              <input type="checkbox" id="f-dsgvo" name="dsgvo" required />
+              <label for="f-dsgvo" data-i18n-html="dsgvoText">Ich habe die <a href="datenschutz.html" class="form-link" target="_blank">Datenschutzerklärung</a> gelesen und stimme zu. <span aria-hidden="true">*</span></label>
+            </div>
             <span class="field-err" role="alert" aria-live="polite"></span>
           </div>
 
           <button type="submit" class="btn btn-amber btn-lg btn-full" id="submitBtn">
-            <span class="btn-label">Jetzt kostenlos anfragen</span>
+            <span class="btn-label" data-i18n="submitBtn">Jetzt kostenlos anfragen</span>
             <span class="btn-spinner" aria-hidden="true" hidden>
               <svg class="spinner" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="3" opacity=".25"/><path d="M12 2a10 10 0 0110 10" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>
             </span>
           </button>
 
-          <p class="form-hint">* Pflichtfelder · Deine Daten werden vertraulich behandelt.</p>
+          <p class="form-hint" data-i18n="formHint">* Pflichtfelder · Deine Daten werden vertraulich behandelt.</p>
 
           <div class="form-success" id="formSuccess" hidden role="alert" aria-live="polite">
             <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/><path d="M8 12l3 3 5-5" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             <div>
-              <strong>Anfrage gesendet!</strong>
-              <p>Wir melden uns innerhalb von 24 Stunden bei dir — auf Deutsch, Arabisch oder Englisch.</p>
+              <strong data-i18n="successTitle">Anfrage gesendet!</strong>
+              <p data-i18n="successMsg">Wir melden uns innerhalb von 24 Stunden bei dir — auf Deutsch, Arabisch oder Englisch.</p>
             </div>
           </div>
 

@@ -791,7 +791,7 @@ h1,h2,h3,h4 { font-family: var(--display); line-height: 1.12; color: var(--navy)
 .field label { font-size: .82rem; font-weight: 600; color: var(--navy); }
 .field label span { color: #dc2626; margin-inline-start: .1rem; }
 
-.field input,
+.field input:not([type="checkbox"]),
 .field textarea {
   width: 100%;
   padding: .72em 1em;
@@ -843,15 +843,28 @@ h1,h2,h3,h4 { font-family: var(--display); line-height: 1.12; color: var(--navy)
   color: var(--muted);
 }
 
-.field--check { flex-direction: row; align-items: flex-start; gap: .6rem; }
-.field--check input[type="checkbox"] {
+/* DSGVO-Checkbox: Fehlerspan erscheint unterhalb der Checkbox+Label-Zeile */
+.field--check { flex-direction: column; }
+.check-row {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: .6rem;
+}
+.check-row input[type="checkbox"] {
   width: 17px; height: 17px;
   accent-color: var(--amber);
   flex-shrink: 0;
   margin-top: .18rem;
   cursor: pointer;
 }
-.field--check label { font-size: .83rem; color: var(--muted); cursor: pointer; line-height: 1.5; }
+/* Fehlerrahmen wenn Checkbox nicht angehakt */
+.check-row input[type="checkbox"].has-error {
+  outline: 2px solid #dc2626;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+.check-row label { font-size: .83rem; color: var(--muted); cursor: pointer; line-height: 1.5; }
 .form-link { color: #3b5bdb; text-decoration: underline; }
 
 .field-err { font-size: .76rem; color: #dc2626; min-height: 1rem; }
